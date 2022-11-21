@@ -3,7 +3,7 @@ var clickSearch = $("searchMe");
 var inputSearch = "";
 var cityLocation = "";
 var dayOfTheWeek = moment().format("MMMMM Do YYY, h:mm:ss a");
-var apiKey = "d899707429dae12637678613a5874634";
+var apiKey = "e09abfee77f5d4e2ce7773085ff94cc9"
 
 clickSearch.click(function () {
     // console.log("clickSearch");
