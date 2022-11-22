@@ -6,11 +6,7 @@ var dayOfTheWeek = moment().format("MMMMM Do YYY, h:mm:ss a");
 var apiKey = "e09abfee77f5d4e2ce7773085ff94cc9";
 
 clickSearch.addEventListener("click", getLocation); 
-// function () {
-    
-//     inputSearch = $("searchMe").val().trim();
-//     getLocation(cityLocation);
-// };
+
 console.log(clickSearch);
 console.log(cityLocation);
 
