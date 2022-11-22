@@ -1,20 +1,25 @@
 //Variable Declaration
-var clickSearch = $("searchMe");
-var inputSearch = "";
-var cityLocation = "";
+var clickSearch = document.getElementById("searchMe");
+var inputSearch = document.getElementById("city");
+var cityLocation = inputSearch.innerHTML;
 var dayOfTheWeek = moment().format("MMMMM Do YYY, h:mm:ss a");
-var apiKey = "e09abfee77f5d4e2ce7773085ff94cc9"
+var apiKey = "e09abfee77f5d4e2ce7773085ff94cc9";
 
-clickSearch.click(function () {
-    // console.log("clickSearch");
-    inputSearch = $("searchMe").val().trim();
-    getLocation(inputSearch);
-});
+clickSearch.addEventListener("click", getLocation); 
+// function () {
+    
+//     inputSearch = $("searchMe").val().trim();
+//     getLocation(cityLocation);
+// };
+console.log(clickSearch);
+console.log(cityLocation);
 
-
-function getLocation (inputSearch) {
-    var apiKeyUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + inputSearch + "&limit=1&appid=" + apiKey;
+function getLocation (event) { 
+    event.preventDefault()
+    console.log(cityLocation);
+    
     fetch(apiKeyUrl).then(function(response){
+        console.log(response)
         if(response.ok){
             response.json().then(function(data){
                 console.log(data);
